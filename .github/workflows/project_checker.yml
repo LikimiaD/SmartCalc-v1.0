@@ -1,0 +1,28 @@
+name: Linter check, cppcheck, and code coverage
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install build essentials and clang-format
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential clang-format cppcheck lcov check
+
+    - name: Run lint
+      run: clang-format -i --style=Google **/*.c **/*.h **/*.cpp
+    - name: Run cppcheck
+      run: cppcheck --language=c **/*.c && cppcheck --language=c++ **/*.cpp **/*.h
+    - name: Run build
+      run: make stack_lib && make poland_lib && make poland_lib_gcov
+    - name: Run tests
+      run: make
