@@ -19,7 +19,7 @@ jobs:
         sudo apt-get install -y build-essential clang-format cppcheck lcov check gcovr
 
     - name: Run lint
-      run: clang-format -i --style=Google **/*.c **/*.h **/*.cpp
+      run: clang-format -n --style=Google **/*.c **/*.h **/*.cpp
     - name: Run cppcheck
       run: cppcheck --language=c **/*.c && cppcheck --language=c++ **/*.cpp **/*.h
     - name: Run build
