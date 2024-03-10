@@ -1,5 +1,11 @@
 # SmartCalc v1.0
 
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Qt](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white)
+
+
 SmartCalc v1.0 is a comprehensive calculator application developed in C (C11 standard) using the GCC compiler and the Qt framework for the graphical user interface. It supports a wide range of arithmetic operations and functions, including the ability to plot graphs for given expressions.
 
 ## Features
